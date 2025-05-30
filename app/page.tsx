@@ -1,12 +1,23 @@
 import { AddToServerButton, DocsButton } from "@/ui/homepage/homepage-buttons";
 import Link from "next/link";
 import { ShieldCheckIcon, DocumentTextIcon } from "@heroicons/react/24/outline";
+import Image from "next/image";
+import blazevortexLogo from "@/public/blazevortex.png";
 
 export default function Home() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <h1 className="font-bold text-7xl">BlazeVortex</h1>
+        <div className="flex items-center justify-center gap-4">
+          <Image
+            src={blazevortexLogo}
+            width={200}
+            height={200}
+            alt="BlazeVortex Logo"
+            className="rounded-2xl w-[2rem] sm:w-[4rem] md:w-[6rem] lg:w-[8rem] h-auto"
+          />
+          <h1 className="text-3xl font-bold md:text-7xl sm:text-6xl lg:text-8xl">BlazeVortex</h1>
+        </div>
         <ol className="text-lg text-center sm:text-left">
           <li className="mb-2">
             A Discord bot that <i>isn&#39;t</i> helpful.
