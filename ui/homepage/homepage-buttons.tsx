@@ -1,10 +1,13 @@
 "use client";
 
 import { RocketLaunchIcon, BookOpenIcon } from "@heroicons/react/24/solid";
+import { useRouter } from "next/navigation";
 
 export function AddToServerButton() {
+  const router = useRouter();
+
   function AddToServer() {
-    alert("Give us a minute, we're working on it!");
+    router.push("https://discord.com/oauth2/authorize?client_id=1334211480492572775");
   }
 
   return (
