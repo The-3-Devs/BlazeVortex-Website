@@ -1,4 +1,8 @@
-import { AddToServerButton, DocsButton } from "@/ui/homepage/homepage-buttons";
+import {
+  AddToServerButton,
+  DocsButton,
+  JoinPublicServerButton,
+} from "@/ui/homepage/homepage-buttons";
 import Link from "next/link";
 import { ShieldCheckIcon, DocumentTextIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
@@ -42,6 +46,7 @@ export default function Home() {
             <AddToServerButton />
             <DocsButton />
           </div>
+          <JoinPublicServerButton />
         </main>
         <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center border-2 border-white p-4 rounded-2xl bg-black/60 backdrop-blur-md">
           <Link

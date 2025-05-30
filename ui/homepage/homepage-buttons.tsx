@@ -1,6 +1,6 @@
 "use client";
 
-import { RocketLaunchIcon, BookOpenIcon } from "@heroicons/react/24/solid";
+import { RocketLaunchIcon, BookOpenIcon, QuestionMarkCircleIcon } from "@heroicons/react/24/solid";
 import { useRouter } from "next/navigation";
 
 export function AddToServerButton() {
@@ -17,6 +17,24 @@ export function AddToServerButton() {
       onClick={AddToServer}
     >
       <RocketLaunchIcon width={20} /> Add to your server
+    </button>
+  );
+}
+
+export function JoinPublicServerButton() {
+  const router = useRouter();
+
+  function AddToServer() {
+    router.push("https://discord.gg/y7VPuQuD2f");
+  }
+
+  return (
+    <button
+      type="button"
+      className="rounded-full border border-solid border-transparent transition-colors inline-flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
+      onClick={AddToServer}
+    >
+      <QuestionMarkCircleIcon width={24} /> Join Our Support Server For Help
     </button>
   );
 }
