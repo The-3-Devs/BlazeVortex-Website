@@ -7,14 +7,12 @@ import Link from "next/link";
 import { ShieldCheckIcon, DocumentTextIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import blazevortexLogo from "@/public/blazevortex.png";
-import VortexBG from "@/ui/backgrounds/vortex-bg";
-import MarqueeBg from "@/ui/backgrounds/marquee-bg";
+import Waves from "@/ui/backgrounds/Waves/Waves";
 
 export default function Home() {
   return (
     <>
-      <VortexBG />
-      <MarqueeBg />
+      <Waves lineColor={"#db5800"} className="-z-2" />
       <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
         <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start border-2 border-white p-8 rounded-3xl bg-black/60 backdrop-blur-md w-full max-w-3xl">
           <div className="flex items-center justify-center gap-4">
