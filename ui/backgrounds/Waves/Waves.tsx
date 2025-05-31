@@ -6,7 +6,7 @@
 	3-6-2025
 */
 
-import { useRef, useEffect, useState, CSSProperties } from "react";
+import { useRef, useEffect, CSSProperties } from "react";
 
 class Grad {
   x: number;
@@ -166,8 +166,6 @@ const Waves: React.FC<WavesProps> = ({
   style = {},
   className = "",
 }) => {
-  const [useCursor, setUseCursor] = useState(true);
-
   const containerRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const ctxRef = useRef<CanvasRenderingContext2D | null>(null);
@@ -237,11 +235,6 @@ const Waves: React.FC<WavesProps> = ({
     xGap,
     yGap,
   ]);
-
-  function toggleCursor() {
-    console.log(useCursor);
-    setUseCursor(!useCursor);
-  }
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -441,27 +434,17 @@ const Waves: React.FC<WavesProps> = ({
       }}
       className={`absolute top-0 left-0 w-full h-full overflow-hidden ${className}`}
     >
-      {useCursor && (
-        <>
-          <div
-            className="absolute top-0 left-0 bg-[#160000]/30 dark:bg-[#e9ffff]/30 backdrop-invert rounded-full z-[999] w-[0.75rem] h-[0.75rem] pointer-events-none"
-            style={{
-              pointerEvents: "none",
-              transform:
-                "translate3d(calc(var(--x) - 50%), calc(var(--y) - 50%), 0)",
-              willChange: "transform",
-            }}
-          />
-        </>
-      )}
-
-      <button
-        type="button"
-        onClick={toggleCursor}
-        className="absolute pointer-events-auto bottom-[5%] right-[5%] border-2 transition-all duration-200 px-2 rounded-3xl z-[1000] border-[#121212] bg-[#ededed] dark:bg-[#121212] dark:border-[#ededed] hover:bg-gray-400 dark:hover:bg-gray-800"
-      >
-        <p>Toggle custom cursor</p>
-      </button>
+      <>
+        <div
+          className="absolute top-0 left-0 bg-[#160000]/30 dark:bg-[#e9ffff]/30 backdrop-invert rounded-full z-[999] w-[0.75rem] h-[0.75rem] pointer-events-none"
+          style={{
+            pointerEvents: "none",
+            transform:
+              "translate3d(calc(var(--x) - 50%), calc(var(--y) - 50%), 0)",
+            willChange: "transform",
+          }}
+        />
+      </>
       <canvas ref={canvasRef} className="block w-full h-full" />
     </div>
   );
