@@ -35,12 +35,13 @@ export default function Home() {
               Maintained by{" "}
               <a
                 className="underline text-[#3874ff]"
-                href="https://github.com/The-3-Devs"
+                href="https://github.com/The-3-Devs/"
               >
                 T3D
               </a>{" "}
               (sometimes)
             </li>
+          
           </ol>
           <div className="flex flex-col items-center gap-4 sm:flex-row">
             <AddToServerButton />
