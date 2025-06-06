@@ -12,9 +12,9 @@ import Waves from "@/ui/backgrounds/Waves/Waves";
 export default function Home() {
   return (
     <>
-      <Waves lineColor={"#db5800"} className="-z-2" />
+      <Waves lineColor={"#FF5E00"} className="-z-2" />
       <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-        <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start border-2 border-white p-8 rounded-3xl bg-black/60 backdrop-blur-md w-full max-w-3xl">
+        <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start border-2 border-white p-8 rounded-3xl bg-black/30 backdrop-blur-md w-full max-w-3xl">
           <div className="flex items-center justify-center gap-4">
             <Image
               src={blazevortexLogo}
@@ -48,7 +48,7 @@ export default function Home() {
           </div>
           <JoinPublicServerButton />
         </main>
-        <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center border-2 border-white p-4 rounded-2xl bg-black/60 backdrop-blur-md">
+        <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center border-2 border-white p-4 rounded-2xl bg-black/30 backdrop-blur-md">
           <Link
             className="flex items-center gap-2 hover:underline hover:underline-offset-4"
             href="/tos"
