@@ -26,7 +26,7 @@ export default function Page() {
         <h2 className="mt-4 text-2xl">3. Who Has Access</h2>
         <p>
           Only The 3 Devs™ — no third parties, no sketchy data brokers. Our
-          code, our server, our responsibility.
+          code, our server, our responsibility. Gemini Google only.
         </p>
         <h2 className="mt-4 text-2xl">4. AI Stuff</h2>
         <p>

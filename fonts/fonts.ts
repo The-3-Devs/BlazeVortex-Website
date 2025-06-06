@@ -30,6 +30,7 @@ export const space_700weight_italic = Space_Mono({
 });
 
 //i changed this, too lazy to change the other stuff
+// k bowser
 
 export const open_sans_400weight = Open_Sans({
     weight: "400",

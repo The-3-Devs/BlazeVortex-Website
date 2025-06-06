@@ -4,7 +4,7 @@ import "./globals.css";
 import Navbar from "@/ui/navbar";
 
 export const metadata: Metadata = {
-  title: "BlazeVortex",
+  title: "T3D/BlazeVortex",
   description: "A Discord bot that isn't helpful.",
 };
 

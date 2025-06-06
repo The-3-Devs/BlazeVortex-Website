@@ -41,7 +41,7 @@ export function JoinPublicServerButton() {
 
 export function DocsButton() {
   function viewDocs() {
-    alert("Give us a minute, we're working on it!");
+    alert("We are not currently working on Docs/Documentation, but we will soon, thx for your consideration");
   }
 
   return (
