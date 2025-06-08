@@ -7,7 +7,7 @@ export function AddToServerButton() {
   const router = useRouter();
 
   function AddToServer() {
-    router.push("https://discord.com/oauth2/authorize?client_id=1334211480492572775&permissions=1698731708120145&scope=bot");
+    router.push("https://discord.com/oauth2/authorize?client_id=1334211480492572775");
   }
 
   return (
