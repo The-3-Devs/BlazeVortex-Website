@@ -14,9 +14,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html className="w-screen!" lang="en">
       <body
-        className={`antialiased ${open_sans_400weight.className}`}
+        className={`antialiased min-w-screen ${open_sans_400weight.className}`}
       >
         <Navbar />
         {children}
