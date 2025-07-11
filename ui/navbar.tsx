@@ -8,7 +8,7 @@ export default function Navbar() {
   return (
     <>
       <div className="absolute top-0 flex items-center justify-center w-full">
-        <div className="flex items-center justify-center gap-2 p-2 px-4 m-2 border-2 border-white rounded-3xl bg-black/60 backdrop-blur-md">
+        <div className="flex items-center justify-center gap-2 p-2 px-4 m-2 mt-4 border-2 border-white rounded-3xl bg-black/60 backdrop-blur-md">
           <Link href={"/"} className="flex items-center gap-2">
             <Image
               alt="BlazeVortex Logo"
