@@ -23,3 +23,36 @@ body,
 #__next {
   height: 100%;
 }
+
+.pulsing-image {
+    animation: color-pulse 120s infinite alternate;
+}
+
+@keyframes color-pulse {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    50% {
+        filter: hue-rotate(360deg);
+    }
+    100% {
+        filter: hue-rotate(0deg);
+    }
+}
+
+.rotate-image {
+  animation: rotateAnimation 120s linear infinite;
+}
+
+@keyframes rotateAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.radial-opacity-mask {
+  mask-image: radial-gradient(#000, transparent)
+}
