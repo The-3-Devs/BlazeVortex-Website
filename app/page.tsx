@@ -7,7 +7,7 @@ import Link from "next/link";
 import { ShieldCheckIcon, DocumentTextIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import blazevortexLogo from "@/public/blazevortex.png";
-import VortexBG from "@/ui/backgrounds/vortex-bg"
+import VortexBG from "@/ui/backgrounds/vortex-bg";
 
 export default function Home() {
   return (
@@ -41,7 +41,6 @@ export default function Home() {
               </a>{" "}
               (sometimes)
             </li>
-          
           </ol>
           <div className="flex flex-col items-center gap-4 sm:flex-row">
             <AddToServerButton />

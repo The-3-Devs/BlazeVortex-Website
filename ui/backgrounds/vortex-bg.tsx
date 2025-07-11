@@ -1,5 +1,5 @@
 import Image from "next/image";
-import flameImage from "@/public/blazevortex-bg-upscaled-circle.png";
+import flameImage from "@/public/blazevortex-bg-circle-stars-upscaled.png";
 
 export default function VortexBG() {
   return (
