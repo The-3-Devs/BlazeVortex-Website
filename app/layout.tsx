@@ -14,13 +14,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className="w-screen!" lang="en">
-      <body
-        className={`antialiased min-w-screen ${open_sans_400weight.className}`}
-      >
-        <Navbar />
-        {children}
-      </body>
-    </html>
+      <html className="w-screen!" lang="en">
+        <body
+          className={`antialiased min-w-screen ${open_sans_400weight.className}`}
+        >
+          <Navbar />
+          {children}
+        </body>
+      </html>
   );
 }
