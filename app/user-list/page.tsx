@@ -22,11 +22,9 @@ function UserData() {
   return (
     <ol className="ml-4 list-decimal marker:ml-4">
       {data.map((user: { selectedName: string; _id: string }) => (
-        <>
-          <li key={user._id} className="p-4 border-gray-200">
-            <h2 className="text-xl font-semibold">{user.selectedName}</h2>
-          </li>
-        </>
+        <li key={user._id} className="p-4 border-gray-200">
+          <h2 className="text-xl font-semibold">{user.selectedName}</h2>
+        </li>
       ))}
       <div>{isFetching ? "Updating..." : ""}</div>
     </ol>
