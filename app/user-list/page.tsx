@@ -47,7 +47,7 @@ function UserData() {
             .sort((a: UserData, b: UserData) => b.usageCount - a.usageCount)
             .map((user: UserData, i: number) => (
               <React.Fragment key={user._id}>
-                <tr className="p-4 rounded-none border-[#ededed] border-2 even:bg-gray-900">
+                <tr className="p-4 rounded-none border-[#ededed] border-2 even:bg-gray-900 odd:bg-gray-900/75">
                   <td className="text-xl font-semibold rounded-none border-[#ededed] border-2 p-2">{i+1}</td>
                   <td className="text-xl font-semibold rounded-none border-[#ededed] border-2 p-2">
                     {user.selectedName}
