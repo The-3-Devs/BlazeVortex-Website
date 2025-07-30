@@ -3,6 +3,7 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { useQuery } from "@tanstack/react-query";
 import CenteredDivPage from "@/ui/global/centered-div-page";
+import React from "react";
 
 const queryClient = new QueryClient();
 
@@ -19,15 +20,48 @@ function UserData() {
 
   if (error) return "An error has occurred: " + error.message;
 
+  interface UserData {
+    selectedName: string;
+    _id: string;
+    usageCount: number;
+  }
+
   return (
-    <ol className="ml-4 list-decimal marker:ml-4">
-      {data.map((user: { selectedName: string; _id: string }) => (
-        <li key={user._id} className="p-4 border-gray-200">
-          <h2 className="text-xl font-semibold">{user.selectedName}</h2>
-        </li>
-      ))}
+    <>
+      <table className="ml-4 text-left rounded-none table-auto">
+        <thead className="rounded-none border-[#ededed] border-2">
+          <tr className="p-4 rounded-none bg-gray-900 border-[#ededed] border-2">
+            <th className="text-xl font-semibold rounded-none border-[#ededed] border-2 p-2">
+              Ranking
+            </th>
+            <th className="text-xl font-semibold rounded-none border-[#ededed] border-2 p-2">
+              Name
+            </th>
+            <th className="text-xl font-semibold rounded-none border-[#ededed] border-2 p-2">
+              Usage Count
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {data
+            .sort((a: UserData, b: UserData) => b.usageCount - a.usageCount)
+            .map((user: UserData, i: number) => (
+              <React.Fragment key={user._id}>
+                <tr className="p-4 rounded-none border-[#ededed] border-2 even:bg-gray-900">
+                  <td className="text-xl font-semibold rounded-none border-[#ededed] border-2 p-2">{i+1}</td>
+                  <td className="text-xl font-semibold rounded-none border-[#ededed] border-2 p-2">
+                    {user.selectedName}
+                  </td>
+                  <td className="rounded-none border-[#ededed] border-2 p-2">
+                    {user.usageCount}
+                  </td>
+                </tr>
+              </React.Fragment>
+            ))}
+        </tbody>
+      </table>
       <div>{isFetching ? "Updating..." : ""}</div>
-    </ol>
+    </>
   );
 }
 
