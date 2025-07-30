@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { open_sans_400weight } from "@/fonts/fonts";
 import "./globals.css";
 import Navbar from "@/ui/navbar";
+import { Analytics } from "@vercel/analytics/next"
 
 export const metadata: Metadata = {
   title: "T3D/BlazeVortex",
@@ -21,6 +22,7 @@ export default function RootLayout({
           <Navbar />
           {children}
         </body>
+        <Analytics />
       </html>
   );
 }
